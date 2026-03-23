@@ -1,0 +1,60 @@
+name: Data Pipeline Quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  dbt-structure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate dbt structure
+        run: python scripts/validate_dbt_structure.py
+
+  dbt-parse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dbt DuckDB adapter
+        run: pip install "dbt-duckdb>=1.8.1,<2.0.0"
+
+      - name: Create CI dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml <<'EOF'
+          flock:
+            target: ci
+            outputs:
+              ci:
+                type: duckdb
+                path: /tmp/ci.duckdb
+                schema: analytics
+                threads: 1
+          EOF
+
+      - name: dbt deps
+        working-directory: dbt
+        run: dbt deps
+
+      - name: dbt parse
+        working-directory: dbt
+        run: dbt parse

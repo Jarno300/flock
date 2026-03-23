@@ -1,0 +1,36 @@
+name: flock
+version: "1.0.0"
+config-version: 2
+
+profile: flock
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+models:
+  flock:
+    +persist_docs:
+      relation: true
+      columns: true
+    raw:
+      +schema: raw
+      +materialized: view
+      +tags: ["raw"]
+    staging:
+      +schema: stg_bird_data
+      +materialized: view
+      +tags: ["staging"]
+    marts:
+      +materialized: table
+      +schema: mart_bird_data
+      +tags: ["mart"]

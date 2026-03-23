@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Wide raw GBIF observations persisted in DuckDB.
+    schema: raw
+    tables:
+      - name: gbif_observations_raw
+        description: Raw GBIF records with full JSON payload and selected parsed fields.
+        columns:
+          - name: gbif_id
+            description: Unique GBIF occurrence identifier.
+            tests:
+              - not_null
+          - name: event_date
+            description: Observation event date.
+            tests:
+              - not_null
+          - name: latitude
+            description: Latitude from GBIF payload.
+          - name: longitude
+            description: Longitude from GBIF payload.
+          - name: raw_payload
+            description: Full GBIF JSON payload for auditability and future extraction.

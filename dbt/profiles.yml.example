@@ -1,0 +1,8 @@
+flock:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', '/usr/app/data/flock.duckdb') }}"
+      schema: analytics
+      threads: 4

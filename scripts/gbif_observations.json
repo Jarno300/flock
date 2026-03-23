@@ -1,0 +1,2002 @@
+[
+  {
+    "gbif_id": "6133210198",
+    "species": "Grus grus",
+    "date": "2026-01-30",
+    "latitude": 49.695475,
+    "longitude": 5.430089,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6147365585",
+    "species": "Grus grus",
+    "date": "2026-02-04",
+    "latitude": 50.464714,
+    "longitude": 5.259605,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6147443044",
+    "species": "Grus grus",
+    "date": "2026-02-03",
+    "latitude": 50.526437,
+    "longitude": 5.585928,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6147701416",
+    "species": "Grus grus",
+    "date": "2026-02-08",
+    "latitude": 50.092467,
+    "longitude": 5.406163,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6158752971",
+    "species": "Grus grus",
+    "date": "2026-02-07",
+    "latitude": 50.670479,
+    "longitude": 6.140003,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6163204452",
+    "species": "Grus grus",
+    "date": "2026-02-20",
+    "latitude": 50.526456,
+    "longitude": 5.585968,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6171150471",
+    "species": "Grus grus",
+    "date": "2026-02-25",
+    "latitude": 50.000002,
+    "longitude": 5.717656,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6171165970",
+    "species": "Grus grus",
+    "date": "2026-02-25",
+    "latitude": 50.449055,
+    "longitude": 5.467427,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6178732631",
+    "species": "Grus grus",
+    "date": "2026-03-07",
+    "latitude": 50.576262,
+    "longitude": 6.123156,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5064033373",
+    "species": "Grus grus",
+    "date": "2025-02-10",
+    "latitude": 51.067533,
+    "longitude": 5.799128,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5077054416",
+    "species": "Grus grus",
+    "date": "2025-02-19",
+    "latitude": 50.211397,
+    "longitude": 5.292837,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5087201510",
+    "species": "Grus grus",
+    "date": "2025-02-21",
+    "latitude": 50.21163,
+    "longitude": 5.290997,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5135609777",
+    "species": "Grus grus",
+    "date": "2025-02-22",
+    "latitude": 50.685677,
+    "longitude": 6.144822,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5135620931",
+    "species": "Grus grus",
+    "date": "2025-02-09",
+    "latitude": 50.681866,
+    "longitude": 5.988424,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "6129782860",
+    "species": "Grus grus",
+    "date": "2025-02-16",
+    "latitude": 50.97632,
+    "longitude": 5.07655,
+    "individual_count": 82
+  },
+  {
+    "gbif_id": "5108227052",
+    "species": "Grus grus",
+    "date": "2025-03-20",
+    "latitude": 51.29566,
+    "longitude": 3.113662,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5151711774",
+    "species": "Grus grus",
+    "date": "2025-03-19",
+    "latitude": 50.7542,
+    "longitude": 4.5672,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5278387639",
+    "species": "Grus grus",
+    "date": "2025-03-22",
+    "latitude": 50.068288,
+    "longitude": 4.44713,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5140056261",
+    "species": "Grus grus",
+    "date": "2025-04-20",
+    "latitude": 51.055886,
+    "longitude": 5.454097,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5836991948",
+    "species": "Grus grus",
+    "date": "2025-09-26",
+    "latitude": 51.082352,
+    "longitude": 4.258474,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5867842532",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.68026,
+    "longitude": 5.44615,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5867945642",
+    "species": "Grus grus",
+    "date": "2025-10-19",
+    "latitude": 50.321669,
+    "longitude": 5.622967,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5867977500",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.692297,
+    "longitude": 5.415519,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5867983661",
+    "species": "Grus grus",
+    "date": "2025-10-19",
+    "latitude": 50.047391,
+    "longitude": 5.86031,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5868072503",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.692555,
+    "longitude": 5.415237,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5868286173",
+    "species": "Grus grus",
+    "date": "2025-10-19",
+    "latitude": 50.260855,
+    "longitude": 5.467056,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5868469624",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 50.36639,
+    "longitude": 6.22049,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5889219455",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.678826,
+    "longitude": 5.44227,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5889911422",
+    "species": "Grus grus",
+    "date": "2025-10-25",
+    "latitude": 49.696692,
+    "longitude": 5.475588,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5890098403",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.678822,
+    "longitude": 5.442286,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5890252990",
+    "species": "Grus grus",
+    "date": "2025-10-18",
+    "latitude": 49.678822,
+    "longitude": 5.442317,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5903891669",
+    "species": "Grus grus",
+    "date": "2025-10-19",
+    "latitude": 49.69838,
+    "longitude": 5.53008,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5892468521",
+    "species": "Grus grus",
+    "date": "2025-11-06",
+    "latitude": 50.0499,
+    "longitude": 5.848968,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5892615062",
+    "species": "Grus grus",
+    "date": "2025-11-07",
+    "latitude": 50.484401,
+    "longitude": 4.88368,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5892774061",
+    "species": "Grus grus",
+    "date": "2025-11-01",
+    "latitude": 50.294844,
+    "longitude": 5.916151,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5892882484",
+    "species": "Grus grus",
+    "date": "2025-11-06",
+    "latitude": 50.045849,
+    "longitude": 5.857315,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5893018066",
+    "species": "Grus grus",
+    "date": "2025-11-06",
+    "latitude": 50.052242,
+    "longitude": 5.851371,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5024849277",
+    "species": "Grus grus",
+    "date": "2024-01-09",
+    "latitude": 50.115002,
+    "longitude": 5.986,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5325011452",
+    "species": "Grus grus",
+    "date": "2024-01-01",
+    "latitude": 51.299015,
+    "longitude": 3.116298,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148751252",
+    "species": "Grus grus",
+    "date": "2024-02-23",
+    "latitude": 50.8042,
+    "longitude": 5.6895,
+    "individual_count": 7
+  },
+  {
+    "gbif_id": "5148753205",
+    "species": "Grus grus",
+    "date": "2024-02-20",
+    "latitude": 50.87135,
+    "longitude": 5.0395,
+    "individual_count": 15
+  },
+  {
+    "gbif_id": "5306096603",
+    "species": "Grus grus",
+    "date": "2024-02-25",
+    "latitude": 50.0043,
+    "longitude": 5.128509,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5357857584",
+    "species": "Grus grus",
+    "date": "2024-02-15",
+    "latitude": 50.50527,
+    "longitude": 6.070139,
+    "individual_count": 80
+  },
+  {
+    "gbif_id": "5399003146",
+    "species": "Grus grus",
+    "date": "2024-02-15",
+    "latitude": 50.49102,
+    "longitude": 6.137934,
+    "individual_count": 230
+  },
+  {
+    "gbif_id": "5436003908",
+    "species": "Grus grus",
+    "date": "2024-02-11",
+    "latitude": 50.426266,
+    "longitude": 6.02473,
+    "individual_count": 24
+  },
+  {
+    "gbif_id": "5467822260",
+    "species": "Grus grus",
+    "date": "2024-02-22",
+    "latitude": 51.14773,
+    "longitude": 4.317556,
+    "individual_count": 25
+  },
+  {
+    "gbif_id": "5505690891",
+    "species": "Grus grus",
+    "date": "2024-02-15",
+    "latitude": 50.715157,
+    "longitude": 5.915032,
+    "individual_count": 32
+  },
+  {
+    "gbif_id": "5539788667",
+    "species": "Grus grus",
+    "date": "2024-02-15",
+    "latitude": 50.50535,
+    "longitude": 6.098679,
+    "individual_count": 280
+  },
+  {
+    "gbif_id": "5588773738",
+    "species": "Grus grus",
+    "date": "2024-02-25",
+    "latitude": 50.17957,
+    "longitude": 5.660086,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5663495331",
+    "species": "Grus grus",
+    "date": "2024-02-11",
+    "latitude": 50.426266,
+    "longitude": 6.02473,
+    "individual_count": 24
+  },
+  {
+    "gbif_id": "5679773132",
+    "species": "Grus grus",
+    "date": "2024-02-12",
+    "latitude": 50.564434,
+    "longitude": 6.171354,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5701288681",
+    "species": "Grus grus",
+    "date": "2024-02-19",
+    "latitude": 50.63426,
+    "longitude": 4.528119,
+    "individual_count": 45
+  },
+  {
+    "gbif_id": "5714385672",
+    "species": "Grus grus",
+    "date": "2024-02-15",
+    "latitude": 50.342648,
+    "longitude": 5.564538,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4596913176",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.797709,
+    "longitude": 4.406701,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4596927101",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.621228,
+    "longitude": 4.660688,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4596968447",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.797454,
+    "longitude": 4.424529,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4597349068",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.845297,
+    "longitude": 4.348784,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4597358020",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.737107,
+    "longitude": 4.361985,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4597363934",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.40015,
+    "longitude": 5.077569,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4597374187",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.794403,
+    "longitude": 4.642977,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4597400973",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.352333,
+    "longitude": 3.364042,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4605966588",
+    "species": "Grus grus",
+    "date": "2024-03-15",
+    "latitude": 50.6041,
+    "longitude": 5.6641,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148660281",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.86346,
+    "longitude": 4.34282,
+    "individual_count": 60
+  },
+  {
+    "gbif_id": "5148663247",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.7797,
+    "longitude": 5.13481,
+    "individual_count": 48
+  },
+  {
+    "gbif_id": "5148666353",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.05763,
+    "longitude": 3.74912,
+    "individual_count": 72
+  },
+  {
+    "gbif_id": "5148696317",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.07194,
+    "longitude": 4.34854,
+    "individual_count": 5
+  },
+  {
+    "gbif_id": "5148697409",
+    "species": "Grus grus",
+    "date": "2024-03-17",
+    "latitude": 50.79555,
+    "longitude": 5.67481,
+    "individual_count": 6
+  },
+  {
+    "gbif_id": "5148726339",
+    "species": "Grus grus",
+    "date": "2024-03-11",
+    "latitude": 50.81351,
+    "longitude": 5.67583,
+    "individual_count": 21
+  },
+  {
+    "gbif_id": "5148727394",
+    "species": "Grus grus",
+    "date": "2024-03-10",
+    "latitude": 51.39265,
+    "longitude": 4.45888,
+    "individual_count": 80
+  },
+  {
+    "gbif_id": "5148754344",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.15991,
+    "longitude": 4.99499,
+    "individual_count": 20
+  },
+  {
+    "gbif_id": "5148758303",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.86346,
+    "longitude": 4.34282,
+    "individual_count": 60
+  },
+  {
+    "gbif_id": "5148758304",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.0578,
+    "longitude": 3.72058,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5148779458",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.86048,
+    "longitude": 3.63229,
+    "individual_count": 16
+  },
+  {
+    "gbif_id": "5148780317",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.06278,
+    "longitude": 4.36225,
+    "individual_count": 40
+  },
+  {
+    "gbif_id": "5280645398",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.030022,
+    "longitude": 4.979737,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5300726886",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.352913,
+    "longitude": 3.364034,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5302877969",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.88528,
+    "longitude": 4.673806,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5309023246",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.062256,
+    "longitude": 3.751013,
+    "individual_count": 20
+  },
+  {
+    "gbif_id": "5311314270",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 51.352913,
+    "longitude": 3.364034,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5318084462",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.957977,
+    "longitude": 5.132468,
+    "individual_count": 47
+  },
+  {
+    "gbif_id": "5323151162",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.94555,
+    "longitude": 3.652789,
+    "individual_count": 52
+  },
+  {
+    "gbif_id": "5336083384",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.325787,
+    "longitude": 3.169599,
+    "individual_count": 66
+  },
+  {
+    "gbif_id": "5344243778",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.872868,
+    "longitude": 4.56805,
+    "individual_count": 95
+  },
+  {
+    "gbif_id": "5344490392",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.339428,
+    "longitude": 4.243493,
+    "individual_count": 15
+  },
+  {
+    "gbif_id": "5345465617",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.017372,
+    "longitude": 3.935093,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5357027544",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 51.179344,
+    "longitude": 4.645994,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5357880493",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.919357,
+    "longitude": 4.715666,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5362595535",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.96183,
+    "longitude": 5.487851,
+    "individual_count": 3
+  },
+  {
+    "gbif_id": "5368121078",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.059017,
+    "longitude": 3.730859,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5373218915",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.2589,
+    "longitude": 5.42046,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5374561501",
+    "species": "Grus grus",
+    "date": "2024-03-22",
+    "latitude": 50.701115,
+    "longitude": 5.152109,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "5379090055",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.781055,
+    "longitude": 5.683094,
+    "individual_count": 125
+  },
+  {
+    "gbif_id": "5380138407",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 51.24376,
+    "longitude": 4.29471,
+    "individual_count": 5
+  },
+  {
+    "gbif_id": "5381292359",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.919357,
+    "longitude": 4.715666,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5388031308",
+    "species": "Grus grus",
+    "date": "2024-03-03",
+    "latitude": 49.697052,
+    "longitude": 5.38303,
+    "individual_count": 25
+  },
+  {
+    "gbif_id": "5395610564",
+    "species": "Grus grus",
+    "date": "2024-03-18",
+    "latitude": 51.300568,
+    "longitude": 3.117371,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5399984772",
+    "species": "Grus grus",
+    "date": "2024-03-04",
+    "latitude": 49.697052,
+    "longitude": 5.38303,
+    "individual_count": 6
+  },
+  {
+    "gbif_id": "5401088290",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.923275,
+    "longitude": 4.408285,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5403352537",
+    "species": "Grus grus",
+    "date": "2024-03-10",
+    "latitude": 51.153187,
+    "longitude": 4.315891,
+    "individual_count": 130
+  },
+  {
+    "gbif_id": "5414715249",
+    "species": "Grus grus",
+    "date": "2024-03-07",
+    "latitude": 49.69797,
+    "longitude": 5.356337,
+    "individual_count": 42
+  },
+  {
+    "gbif_id": "5422292522",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.364864,
+    "longitude": 4.348643,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5425179754",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.325787,
+    "longitude": 3.169599,
+    "individual_count": 66
+  },
+  {
+    "gbif_id": "5427929227",
+    "species": "Grus grus",
+    "date": "2024-03-17",
+    "latitude": 50.062443,
+    "longitude": 4.438686,
+    "individual_count": 9
+  },
+  {
+    "gbif_id": "5432182458",
+    "species": "Grus grus",
+    "date": "2024-03-04",
+    "latitude": 51.01171,
+    "longitude": 4.786461,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5435134249",
+    "species": "Grus grus",
+    "date": "2024-03-10",
+    "latitude": 51.152058,
+    "longitude": 4.305898,
+    "individual_count": 10
+  },
+  {
+    "gbif_id": "5440012718",
+    "species": "Grus grus",
+    "date": "2024-03-22",
+    "latitude": 50.701115,
+    "longitude": 5.152109,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "5458561372",
+    "species": "Grus grus",
+    "date": "2024-03-10",
+    "latitude": 51.225,
+    "longitude": 4.74,
+    "individual_count": 11
+  },
+  {
+    "gbif_id": "5475513632",
+    "species": "Grus grus",
+    "date": "2024-03-23",
+    "latitude": 51.331154,
+    "longitude": 4.959105,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5478359984",
+    "species": "Grus grus",
+    "date": "2024-03-18",
+    "latitude": 51.300568,
+    "longitude": 3.117371,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5479074415",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.781055,
+    "longitude": 5.683094,
+    "individual_count": 125
+  },
+  {
+    "gbif_id": "5489725686",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.781055,
+    "longitude": 5.683094,
+    "individual_count": 125
+  },
+  {
+    "gbif_id": "5505766521",
+    "species": "Grus grus",
+    "date": "2024-03-16",
+    "latitude": 50.289417,
+    "longitude": 6.264052,
+    "individual_count": 9
+  },
+  {
+    "gbif_id": "5511947765",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.352913,
+    "longitude": 3.364034,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5525606369",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.14502,
+    "longitude": 4.783635,
+    "individual_count": 45
+  },
+  {
+    "gbif_id": "5543567886",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.781055,
+    "longitude": 5.683094,
+    "individual_count": 125
+  },
+  {
+    "gbif_id": "5576817343",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 50.945114,
+    "longitude": 5.26463,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5583796332",
+    "species": "Grus grus",
+    "date": "2024-03-10",
+    "latitude": 51.14773,
+    "longitude": 4.317556,
+    "individual_count": 136
+  },
+  {
+    "gbif_id": "5601146060",
+    "species": "Grus grus",
+    "date": "2024-03-01",
+    "latitude": 51.152058,
+    "longitude": 4.305898,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5606402880",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.165966,
+    "longitude": 4.398455,
+    "individual_count": 150
+  },
+  {
+    "gbif_id": "5618541730",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.05375,
+    "longitude": 3.72411,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "5626073428",
+    "species": "Grus grus",
+    "date": "2024-03-07",
+    "latitude": 50.48308,
+    "longitude": 6.179052,
+    "individual_count": 150
+  },
+  {
+    "gbif_id": "5660068976",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.352913,
+    "longitude": 3.364034,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5683156882",
+    "species": "Grus grus",
+    "date": "2024-03-02",
+    "latitude": 50.987072,
+    "longitude": 5.48293,
+    "individual_count": 2736
+  },
+  {
+    "gbif_id": "5701003376",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 51.14502,
+    "longitude": 4.783635,
+    "individual_count": 25
+  },
+  {
+    "gbif_id": "5702936981",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 50.832684,
+    "longitude": 3.78123,
+    "individual_count": 20
+  },
+  {
+    "gbif_id": "5707548227",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 51.14773,
+    "longitude": 4.317556,
+    "individual_count": 261
+  },
+  {
+    "gbif_id": "5710619126",
+    "species": "Grus grus",
+    "date": "2024-03-09",
+    "latitude": 51.325787,
+    "longitude": 3.169599,
+    "individual_count": 66
+  },
+  {
+    "gbif_id": "5712094458",
+    "species": "Grus grus",
+    "date": "2024-03-08",
+    "latitude": 51.179344,
+    "longitude": 4.645994,
+    "individual_count": 33
+  },
+  {
+    "gbif_id": "5148665445",
+    "species": "Grus grus",
+    "date": "2024-05-12",
+    "latitude": 51.32968,
+    "longitude": 3.16506,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5518629537",
+    "species": "Grus grus",
+    "date": "2024-05-09",
+    "latitude": 51.270386,
+    "longitude": 4.489131,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5571198706",
+    "species": "Grus grus",
+    "date": "2024-05-12",
+    "latitude": 51.325787,
+    "longitude": 3.169599,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5582342123",
+    "species": "Grus grus",
+    "date": "2024-06-07",
+    "latitude": 50.959633,
+    "longitude": 4.479198,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5148697801",
+    "species": "Grus grus",
+    "date": "2024-08-02",
+    "latitude": 50.73528,
+    "longitude": 5.10444,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5148727906",
+    "species": "Grus grus",
+    "date": "2024-08-02",
+    "latitude": 50.73528,
+    "longitude": 5.10444,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5608850164",
+    "species": "Grus grus",
+    "date": "2024-09-30",
+    "latitude": 50.822746,
+    "longitude": 3.571715,
+    "individual_count": 3
+  },
+  {
+    "gbif_id": "4973821997",
+    "species": "Grus grus",
+    "date": "2024-10-16",
+    "latitude": 50.321908,
+    "longitude": 5.257375,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4976426949",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.091005,
+    "longitude": 4.680631,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4976580371",
+    "species": "Grus grus",
+    "date": "2024-10-25",
+    "latitude": 50.450238,
+    "longitude": 6.069327,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4976587481",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.090619,
+    "longitude": 4.680365,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4979337066",
+    "species": "Grus grus",
+    "date": "2024-10-27",
+    "latitude": 50.9192,
+    "longitude": 3.6812,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5016039750",
+    "species": "Grus grus",
+    "date": "2024-10-25",
+    "latitude": 50.587269,
+    "longitude": 6.189594,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148663906",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.56346,
+    "longitude": 5.97233,
+    "individual_count": 40
+  },
+  {
+    "gbif_id": "5148664810",
+    "species": "Grus grus",
+    "date": "2024-10-16",
+    "latitude": 50.89691,
+    "longitude": 5.56683,
+    "individual_count": 45
+  },
+  {
+    "gbif_id": "5148665841",
+    "species": "Grus grus",
+    "date": "2024-10-25",
+    "latitude": 51.07604,
+    "longitude": 3.67804,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5148723880",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.63348,
+    "longitude": 6.04747,
+    "individual_count": 250
+  },
+  {
+    "gbif_id": "5148725737",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.6245,
+    "longitude": 6.04688,
+    "individual_count": 281
+  },
+  {
+    "gbif_id": "5148756713",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.359,
+    "longitude": 5.87516,
+    "individual_count": 45
+  },
+  {
+    "gbif_id": "5278706663",
+    "species": "Grus grus",
+    "date": "2024-10-27",
+    "latitude": 50.452612,
+    "longitude": 6.102795,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5279428491",
+    "species": "Grus grus",
+    "date": "2024-10-27",
+    "latitude": 50.040405,
+    "longitude": 5.407086,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5343267433",
+    "species": "Grus grus",
+    "date": "2024-10-17",
+    "latitude": 51.158474,
+    "longitude": 5.725061,
+    "individual_count": 5
+  },
+  {
+    "gbif_id": "5354207019",
+    "species": "Grus grus",
+    "date": "2024-10-16",
+    "latitude": 50.15372,
+    "longitude": 5.141183,
+    "individual_count": 15
+  },
+  {
+    "gbif_id": "5355306119",
+    "species": "Grus grus",
+    "date": "2024-10-25",
+    "latitude": 50.99265,
+    "longitude": 5.483856,
+    "individual_count": 90
+  },
+  {
+    "gbif_id": "5405698218",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.838387,
+    "longitude": 4.74148,
+    "individual_count": 40
+  },
+  {
+    "gbif_id": "5407886343",
+    "species": "Grus grus",
+    "date": "2024-10-27",
+    "latitude": 50.50527,
+    "longitude": 6.070139,
+    "individual_count": 6
+  },
+  {
+    "gbif_id": "5461976695",
+    "species": "Grus grus",
+    "date": "2024-10-27",
+    "latitude": 50.49981,
+    "longitude": 6.079898,
+    "individual_count": 48
+  },
+  {
+    "gbif_id": "5478511069",
+    "species": "Grus grus",
+    "date": "2024-10-25",
+    "latitude": 49.66388,
+    "longitude": 5.493784,
+    "individual_count": 200
+  },
+  {
+    "gbif_id": "5515281021",
+    "species": "Grus grus",
+    "date": "2024-10-26",
+    "latitude": 50.524776,
+    "longitude": 6.096726,
+    "individual_count": 75
+  },
+  {
+    "gbif_id": "4979335161",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 51.2115,
+    "longitude": 3.2858,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4980304609",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.503307,
+    "longitude": 6.095158,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4980457023",
+    "species": "Grus grus",
+    "date": "2024-11-04",
+    "latitude": 50.462059,
+    "longitude": 6.237829,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5013692334",
+    "species": "Grus grus",
+    "date": "2024-11-04",
+    "latitude": 50.564152,
+    "longitude": 6.169074,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5013890406",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.530445,
+    "longitude": 6.100514,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5015664702",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.616459,
+    "longitude": 6.036597,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5017398758",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.609512,
+    "longitude": 5.836136,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5021756139",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.441113,
+    "longitude": 6.039904,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5022856753",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.478325,
+    "longitude": 6.087072,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5023097521",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.51944,
+    "longitude": 6.069069,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5023390122",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.562454,
+    "longitude": 6.168523,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148666915",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.45532,
+    "longitude": 5.97963,
+    "individual_count": 20
+  },
+  {
+    "gbif_id": "5148666921",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.51487,
+    "longitude": 6.11036,
+    "individual_count": 280
+  },
+  {
+    "gbif_id": "5148666922",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.52422,
+    "longitude": 6.09686,
+    "individual_count": 220
+  },
+  {
+    "gbif_id": "5148693916",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.45532,
+    "longitude": 5.97963,
+    "individual_count": 10
+  },
+  {
+    "gbif_id": "5148694940",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.48486,
+    "longitude": 4.41664,
+    "individual_count": 4
+  },
+  {
+    "gbif_id": "5148694941",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.50626,
+    "longitude": 6.09569,
+    "individual_count": 48
+  },
+  {
+    "gbif_id": "5148695914",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.49691,
+    "longitude": 6.10918,
+    "individual_count": 9
+  },
+  {
+    "gbif_id": "5148697939",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.47436,
+    "longitude": 5.93854,
+    "individual_count": 800
+  },
+  {
+    "gbif_id": "5148697946",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.50626,
+    "longitude": 6.09569,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148723894",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.58355,
+    "longitude": 5.88882,
+    "individual_count": 80
+  },
+  {
+    "gbif_id": "5148724972",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.53321,
+    "longitude": 6.09745,
+    "individual_count": 60
+  },
+  {
+    "gbif_id": "5148724973",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.51487,
+    "longitude": 6.11036,
+    "individual_count": 90
+  },
+  {
+    "gbif_id": "5148726901",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.50551,
+    "longitude": 6.12385,
+    "individual_count": 5
+  },
+  {
+    "gbif_id": "5148727973",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.51487,
+    "longitude": 6.11036,
+    "individual_count": 1000
+  },
+  {
+    "gbif_id": "5148727975",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.52385,
+    "longitude": 6.11095,
+    "individual_count": 15
+  },
+  {
+    "gbif_id": "5148753867",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.49691,
+    "longitude": 6.10918,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "5148754874",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.45532,
+    "longitude": 5.97963,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "5148754877",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.52385,
+    "longitude": 6.11095,
+    "individual_count": 62
+  },
+  {
+    "gbif_id": "5148754878",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.51449,
+    "longitude": 6.12444,
+    "individual_count": 29
+  },
+  {
+    "gbif_id": "5148755765",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.55447,
+    "longitude": 5.97176,
+    "individual_count": 300
+  },
+  {
+    "gbif_id": "5148756726",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.52347,
+    "longitude": 6.12504,
+    "individual_count": 45
+  },
+  {
+    "gbif_id": "5148778920",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.52422,
+    "longitude": 6.09686,
+    "individual_count": 28
+  },
+  {
+    "gbif_id": "5148780043",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.54181,
+    "longitude": 6.11213,
+    "individual_count": 44
+  },
+  {
+    "gbif_id": "5148781887",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.64801,
+    "longitude": 4.30838,
+    "individual_count": 13
+  },
+  {
+    "gbif_id": "5148781888",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.51562,
+    "longitude": 6.08219,
+    "individual_count": 186
+  },
+  {
+    "gbif_id": "5148781926",
+    "species": "Grus grus",
+    "date": "2024-11-30",
+    "latitude": 50.81351,
+    "longitude": 5.67583,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5276774590",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.503446,
+    "longitude": 6.094268,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5410484646",
+    "species": "Grus grus",
+    "date": "2024-11-04",
+    "latitude": 49.77007,
+    "longitude": 5.408998,
+    "individual_count": 150
+  },
+  {
+    "gbif_id": "5482641212",
+    "species": "Grus grus",
+    "date": "2024-11-03",
+    "latitude": 50.50535,
+    "longitude": 6.098679,
+    "individual_count": 4000
+  },
+  {
+    "gbif_id": "5505622195",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.50535,
+    "longitude": 6.098679,
+    "individual_count": 4000
+  },
+  {
+    "gbif_id": "5524161132",
+    "species": "Grus grus",
+    "date": "2024-11-28",
+    "latitude": 49.796143,
+    "longitude": 5.372323,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5534228324",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.49102,
+    "longitude": 6.137934,
+    "individual_count": 6200
+  },
+  {
+    "gbif_id": "5552289140",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.40321,
+    "longitude": 6.006069,
+    "individual_count": 250
+  },
+  {
+    "gbif_id": "5634748189",
+    "species": "Grus grus",
+    "date": "2024-11-02",
+    "latitude": 50.3924,
+    "longitude": 6.031808,
+    "individual_count": 220
+  },
+  {
+    "gbif_id": "5008181283",
+    "species": "Grus grus",
+    "date": "2024-12-01",
+    "latitude": 50.486809,
+    "longitude": 6.26934,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5642209783",
+    "species": "Grus grus",
+    "date": "2024-12-01",
+    "latitude": 50.79471,
+    "longitude": 3.308718,
+    "individual_count": 11
+  },
+  {
+    "gbif_id": "4608735974",
+    "species": "Grus grus",
+    "date": "2023-01-08",
+    "latitude": 50.970234,
+    "longitude": 5.292139,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4690575373",
+    "species": "Grus grus",
+    "date": "2023-01-02",
+    "latitude": 50.96976,
+    "longitude": 5.286401,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4808381420",
+    "species": "Grus grus",
+    "date": "2023-01-07",
+    "latitude": 50.96946,
+    "longitude": 5.288142,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4062429552",
+    "species": "Grus grus",
+    "date": "2023-02-15",
+    "latitude": 50.185,
+    "longitude": 5.9402,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4135516375",
+    "species": "Grus grus",
+    "date": "2023-02-14",
+    "latitude": 50.1927,
+    "longitude": 5.4367,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4609974850",
+    "species": "Grus grus",
+    "date": "2023-02-19",
+    "latitude": 51.267357,
+    "longitude": 4.112961,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4620681825",
+    "species": "Grus grus",
+    "date": "2023-02-13",
+    "latitude": 49.747974,
+    "longitude": 5.261696,
+    "individual_count": 95
+  },
+  {
+    "gbif_id": "4661611325",
+    "species": "Grus grus",
+    "date": "2023-02-20",
+    "latitude": 51.19924,
+    "longitude": 3.225188,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4689131615",
+    "species": "Grus grus",
+    "date": "2023-02-26",
+    "latitude": 50.51095,
+    "longitude": 4.854107,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "4697552285",
+    "species": "Grus grus",
+    "date": "2023-02-20",
+    "latitude": 49.7939,
+    "longitude": 5.066757,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4709752124",
+    "species": "Grus grus",
+    "date": "2023-02-27",
+    "latitude": 50.73225,
+    "longitude": 5.938438,
+    "individual_count": 62
+  },
+  {
+    "gbif_id": "5148653899",
+    "species": "Grus grus",
+    "date": "2023-02-22",
+    "latitude": 50.77996,
+    "longitude": 5.12063,
+    "individual_count": 86
+  },
+  {
+    "gbif_id": "5148657733",
+    "species": "Grus grus",
+    "date": "2023-02-07",
+    "latitude": 50.52385,
+    "longitude": 6.11095,
+    "individual_count": 36
+  },
+  {
+    "gbif_id": "5148684793",
+    "species": "Grus grus",
+    "date": "2023-02-15",
+    "latitude": 50.77944,
+    "longitude": 5.14898,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "5148743780",
+    "species": "Grus grus",
+    "date": "2023-02-07",
+    "latitude": 50.52385,
+    "longitude": 6.11095,
+    "individual_count": 77
+  },
+  {
+    "gbif_id": "5148747762",
+    "species": "Grus grus",
+    "date": "2023-02-08",
+    "latitude": 50.55117,
+    "longitude": 6.09863,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5148770771",
+    "species": "Grus grus",
+    "date": "2023-02-07",
+    "latitude": 50.55117,
+    "longitude": 6.09863,
+    "individual_count": 200
+  },
+  {
+    "gbif_id": "4054857838",
+    "species": "Grus grus",
+    "date": "2023-03-02",
+    "latitude": 50.501747,
+    "longitude": 6.110987,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4090270057",
+    "species": "Grus grus",
+    "date": "2023-03-11",
+    "latitude": 50.794464,
+    "longitude": 5.659878,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4611387799",
+    "species": "Grus grus",
+    "date": "2023-03-11",
+    "latitude": 50.95518,
+    "longitude": 5.135417,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4617167839",
+    "species": "Grus grus",
+    "date": "2023-03-14",
+    "latitude": 49.69797,
+    "longitude": 5.356337,
+    "individual_count": 10
+  },
+  {
+    "gbif_id": "4629801394",
+    "species": "Grus grus",
+    "date": "2023-03-16",
+    "latitude": 50.835636,
+    "longitude": 4.645155,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4631300701",
+    "species": "Grus grus",
+    "date": "2023-03-03",
+    "latitude": 50.572865,
+    "longitude": 6.197574,
+    "individual_count": 6
+  },
+  {
+    "gbif_id": "4681239223",
+    "species": "Grus grus",
+    "date": "2023-03-03",
+    "latitude": 50.595455,
+    "longitude": 6.210459,
+    "individual_count": 600
+  },
+  {
+    "gbif_id": "4710051334",
+    "species": "Grus grus",
+    "date": "2023-03-02",
+    "latitude": 49.74061,
+    "longitude": 5.320451,
+    "individual_count": 88
+  },
+  {
+    "gbif_id": "4712437518",
+    "species": "Grus grus",
+    "date": "2023-03-07",
+    "latitude": 50.447067,
+    "longitude": 6.117411,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "4716972435",
+    "species": "Grus grus",
+    "date": "2023-03-17",
+    "latitude": 50.660625,
+    "longitude": 5.844082,
+    "individual_count": 50
+  },
+  {
+    "gbif_id": "4791683381",
+    "species": "Grus grus",
+    "date": "2023-03-03",
+    "latitude": 50.564434,
+    "longitude": 6.171354,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4799119388",
+    "species": "Grus grus",
+    "date": "2023-03-19",
+    "latitude": 50.83955,
+    "longitude": 4.654953,
+    "individual_count": 3
+  },
+  {
+    "gbif_id": "4801054062",
+    "species": "Grus grus",
+    "date": "2023-03-12",
+    "latitude": 50.862278,
+    "longitude": 4.645324,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "5148715784",
+    "species": "Grus grus",
+    "date": "2023-03-02",
+    "latitude": 51.28309,
+    "longitude": 3.63807,
+    "individual_count": 3
+  },
+  {
+    "gbif_id": "4628035577",
+    "species": "Grus grus",
+    "date": "2023-04-04",
+    "latitude": 50.836273,
+    "longitude": 3.586351,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4733742947",
+    "species": "Grus grus",
+    "date": "2023-04-21",
+    "latitude": 50.830235,
+    "longitude": 3.266409,
+    "individual_count": 2
+  },
+  {
+    "gbif_id": "4801435002",
+    "species": "Grus grus",
+    "date": "2023-04-03",
+    "latitude": 50.83527,
+    "longitude": 3.586156,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4818189312",
+    "species": "Grus grus",
+    "date": "2023-05-04",
+    "latitude": 51.325787,
+    "longitude": 3.169599,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4430760496",
+    "species": "Grus grus",
+    "date": "2023-10-19",
+    "latitude": 49.558691,
+    "longitude": 5.817691,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4442500690",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 50.212137,
+    "longitude": 5.292008,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4453922879",
+    "species": "Grus grus",
+    "date": "2023-11-28",
+    "latitude": 49.654159,
+    "longitude": 5.905895,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4738150605",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 50.872868,
+    "longitude": 4.56805,
+    "individual_count": 90
+  },
+  {
+    "gbif_id": "4739348490",
+    "species": "Grus grus",
+    "date": "2023-11-15",
+    "latitude": 49.70612,
+    "longitude": 5.754846,
+    "individual_count": 1
+  },
+  {
+    "gbif_id": "4744525423",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 50.50535,
+    "longitude": 6.098679,
+    "individual_count": 79
+  },
+  {
+    "gbif_id": "4839348607",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 51.143024,
+    "longitude": 4.765937,
+    "individual_count": 40
+  },
+  {
+    "gbif_id": "5148659940",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 50.89876,
+    "longitude": 5.48159,
+    "individual_count": 30
+  },
+  {
+    "gbif_id": "5148660909",
+    "species": "Grus grus",
+    "date": "2023-11-18",
+    "latitude": 50.63123,
+    "longitude": 6.13218,
+    "individual_count": 100
+  },
+  {
+    "gbif_id": "5148690035",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 51.31944,
+    "longitude": 4.55701,
+    "individual_count": 60
+  },
+  {
+    "gbif_id": "5148690036",
+    "species": "Grus grus",
+    "date": "2023-11-17",
+    "latitude": 50.89876,
+    "longitude": 5.48159,
+    "individual_count": 45
+  }
+]

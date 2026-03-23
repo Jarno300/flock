@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_species
+    description: Species dimension with first/last observation dates and activity volume.
+    columns:
+      - name: species_id
+        tests:
+          - not_null
+          - unique
+      - name: species_name
+        tests:
+          - not_null
+
+  - name: fct_daily_species_observations
+    description: Daily fact table by species for bird observation analytics.
+    columns:
+      - name: observation_date
+        tests:
+          - not_null
+      - name: species_id
+        tests:
+          - not_null
+      - name: observation_records
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "observation_records >= 0"
+      - name: individuals_observed
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "individuals_observed >= 0"

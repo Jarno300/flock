@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_belgian_birds
+    description: Standardized staging model for raw GBIF bird observations.
+    columns:
+      - name: gbif_id
+        description: GBIF identifier for one occurrence record.
+        tests:
+          - not_null
+          - unique
+      - name: species_name
+        description: Cleaned species value with Unknown fallback.
+        tests:
+          - not_null
+      - name: observation_date
+        description: Normalized observation date.
+        tests:
+          - not_null
+      - name: latitude
+        description: Observation latitude in degrees.
+        tests:
+          - not_null
+      - name: longitude
+        description: Observation longitude in degrees.
+        tests:
+          - not_null
+      - name: individual_count
+        description: Number of individuals observed.
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "individual_count >= 0"
+      - name: is_valid_observation
+        description: True when coordinates and counts are valid.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+    tests:
+      - valid_lat_lon

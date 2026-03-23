@@ -1,0 +1,14 @@
+.git
+.gitignore
+.vscode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+target/
+dbt_packages/
+logs/
+dbt/profiles.yml
+data/
+airflow/logs/

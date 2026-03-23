@@ -1,2 +1,14 @@
+.env
+.aider*
+target/
+dbt_packages/
+logs/
+.pytest_cache/
+data/
+*.duckdb
+airflow/logs/
+airflow/plugins/
+dbt/profiles.yml
+
 gcp-key.json
 .env
