@@ -9,7 +9,7 @@ services:
       DUCKDB_PATH: /app/data/flock.duckdb
     volumes:
       - ./data:/app/data
-    command: ["python", "belgium_historic_bulk_import.py"]
+    command: ["python", "load_historical_gbif.py"]
 
   ingest-incremental:
     build:
@@ -21,7 +21,7 @@ services:
       DUCKDB_PATH: /app/data/flock.duckdb
     volumes:
       - ./data:/app/data
-    command: ["python", "gbif_incremental_import.py"]
+    command: ["python", "load_incremental_gbif.py"]
 
   dbt:
     build:
@@ -103,3 +103,46 @@ services:
       - ./:/opt/flock
       - ./data:/opt/flock/data
     command: ["bash", "-lc", "airflow scheduler"]
+
+  superset-init:
+    build:
+      context: .
+      dockerfile: visualization/superset/Dockerfile
+    env_file:
+      - .env
+    environment:
+      SUPERSET_SECRET_KEY: "flock-superset-secret-key"
+      DUCKDB_PATH: /app/data/flock.duckdb
+    volumes:
+      - ./data:/app/data
+      - ./visualization/superset/home:/app/superset_home
+    command:
+      [
+        "bash",
+        "-lc",
+        "superset db upgrade && superset fab create-admin --username admin --firstname Super --lastname Set --email admin@example.com --password admin || true && superset init",
+      ]
+
+  superset:
+    build:
+      context: .
+      dockerfile: visualization/superset/Dockerfile
+    depends_on:
+      - superset-init
+    env_file:
+      - .env
+    environment:
+      SUPERSET_SECRET_KEY: "flock-superset-secret-key"
+      DUCKDB_PATH: /app/data/flock.duckdb
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./data:/app/data
+      - ./visualization/superset/home:/app/superset_home
+      - ./visualization:/app/visualization
+    command:
+      [
+        "bash",
+        "-lc",
+        "superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger",
+      ]

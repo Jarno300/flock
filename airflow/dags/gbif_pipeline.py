@@ -22,7 +22,7 @@ with DAG(
 ) as historic_dag:
     run_historic = BashOperator(
         task_id="run_historic_bulk_import",
-        bash_command="cd /opt/flock && python ingestion/belgium_historic_bulk_import.py",
+        bash_command="cd /opt/flock && python ingestion/load_historical_gbif.py",
     )
 
 
@@ -36,7 +36,7 @@ with DAG(
 ) as incremental_dag:
     run_incremental = BashOperator(
         task_id="run_incremental_ingest",
-        bash_command="cd /opt/flock && python ingestion/gbif_incremental_import.py",
+        bash_command="cd /opt/flock && python ingestion/load_incremental_gbif.py",
     )
 
     run_dbt = BashOperator(

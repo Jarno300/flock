@@ -10,4 +10,4 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY ingestion/*.py /app/
 
-CMD ["python", "belgium_historic_bulk_import.py"]
+CMD ["python", "load_historical_gbif.py"]

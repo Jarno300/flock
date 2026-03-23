@@ -2,14 +2,14 @@ import os
 from datetime import date
 
 try:
-    from ingestion.gbif_duckdb_ingest import IngestConfig, run_ingest
+    from ingestion.gbif_raw_loader import IngestConfig, run_ingest
 except ImportError:
-    from gbif_duckdb_ingest import IngestConfig, run_ingest
+    from gbif_raw_loader import IngestConfig, run_ingest
 
 
 def main() -> None:
     config = IngestConfig()
-    start_year = int(os.getenv("START_YEAR", "2025"))
+    start_year = int(os.getenv("START_YEAR", "2020"))
     end_year = int(os.getenv("END_YEAR", str(date.today().year)))
     start_date = date(start_year, 1, 1)
     end_date = date(end_year, 12, 31)

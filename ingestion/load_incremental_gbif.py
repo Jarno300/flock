@@ -4,9 +4,9 @@ import os
 from datetime import date, timedelta
 
 try:
-    from ingestion.gbif_duckdb_ingest import IngestConfig, get_max_event_date, run_ingest
+    from ingestion.gbif_raw_loader import IngestConfig, get_max_event_date, run_ingest
 except ImportError:
-    from gbif_duckdb_ingest import IngestConfig, get_max_event_date, run_ingest
+    from gbif_raw_loader import IngestConfig, get_max_event_date, run_ingest
 
 
 def main() -> None:

@@ -8,6 +8,7 @@ Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
 - `ingestion/`: API extraction and load into local DuckDB.
 - `dbt/`: layered transformation models (`raw -> staging -> marts`).
 - `airflow/`: orchestration with one-time historical bootstrap + daily incremental runs.
+- `visualization/`: Superset runtime and dashboard query assets.
 - `scripts/`: repository checks and governance utilities.
 
 ## Data Storage (DuckDB)
@@ -21,8 +22,8 @@ Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
 
 ## Ingestion Modes
 
-- Historical one-time load: `ingestion/belgium_historic_bulk_import.py`
-- Daily incremental load: `ingestion/gbif_incremental_import.py`
+- Historical one-time load: `ingestion/load_historical_gbif.py`
+- Daily incremental load: `ingestion/load_incremental_gbif.py`
   - starts from last stored `event_date` with a configurable lookback window
   - upserts by `gbif_id`, safe for reruns and overlaps
 
@@ -103,6 +104,32 @@ DAGs:
 
 - `gbif_historic_bootstrap_once`: trigger manually once.
 - `gbif_incremental_daily`: scheduled daily; ingests new data then runs `dbt build`.
+
+## Superset Visualization
+
+Start Superset:
+
+```bash
+docker compose up superset-init
+docker compose up superset
+```
+
+Open UI at `http://localhost:8088` (`admin` / `admin`).
+
+Connect DuckDB in Superset:
+
+- Database type: `DuckDB`
+- SQLAlchemy URI:
+  - `duckdb:////app/data/flock.duckdb`
+
+Recommended datasets for portfolio dashboards:
+
+- `mart_bird_data.fct_daily_species_observations`
+- `mart_bird_data.dim_species`
+
+Starter SQL examples are in:
+
+- `visualization/superset_starter_queries.sql`
 
 ## CI
 

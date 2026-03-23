@@ -1,5 +1,7 @@
 .env
 .aider*
+__pycache__/
+*.pyc
 target/
 dbt_packages/
 logs/
