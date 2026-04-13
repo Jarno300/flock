@@ -9,7 +9,7 @@ services:
       DUCKDB_PATH: /app/data/flock.duckdb
     volumes:
       - ./data:/app/data
-    command: ["python", "load_historical_gbif.py"]
+    command: ["python", "-m", "ingestion.load_historical_gbif"]
 
   ingest-incremental:
     build:
@@ -21,7 +21,7 @@ services:
       DUCKDB_PATH: /app/data/flock.duckdb
     volumes:
       - ./data:/app/data
-    command: ["python", "load_incremental_gbif.py"]
+    command: ["python", "-m", "ingestion.load_incremental_gbif"]
 
   dbt:
     build:

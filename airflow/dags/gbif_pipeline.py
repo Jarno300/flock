@@ -13,20 +13,6 @@ DEFAULT_ARGS = {
 
 
 with DAG(
-    dag_id="gbif_historic_bootstrap_once",
-    start_date=datetime(2026, 1, 1),
-    schedule=None,
-    catchup=False,
-    default_args=DEFAULT_ARGS,
-    tags=["flock", "ingestion", "historic"],
-) as historic_dag:
-    run_historic = BashOperator(
-        task_id="run_historic_bulk_import",
-        bash_command="cd /opt/flock && python ingestion/load_historical_gbif.py",
-    )
-
-
-with DAG(
     dag_id="gbif_incremental_daily",
     start_date=datetime(2026, 1, 1),
     schedule="@daily",
@@ -36,7 +22,7 @@ with DAG(
 ) as incremental_dag:
     run_incremental = BashOperator(
         task_id="run_incremental_ingest",
-        bash_command="cd /opt/flock && python ingestion/load_incremental_gbif.py",
+        bash_command="cd /opt/flock && python -m ingestion.load_incremental_gbif",
     )
 
     run_dbt = BashOperator(

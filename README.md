@@ -5,9 +5,10 @@ Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
 
 ## Architecture
 
-- `ingestion/`: API extraction and load into local DuckDB.
+- `ingestion/`: Python package (`ingestion.*`) for GBIF extract/load into DuckDB; canonical raw DDL reference in `ingestion/sql/raw_gbif_observations.sql`.
+- `tests/`: unit tests for ingestion helpers (`python -m unittest discover -s tests`).
 - `dbt/`: layered transformation models (`raw -> staging -> marts`).
-- `airflow/`: orchestration with one-time historical bootstrap + daily incremental runs.
+- `airflow/`: orchestration for the daily incremental ingest and dbt build (historical backfill is manual; see Docker commands).
 - `visualization/`: Superset runtime and dashboard query assets.
 - `scripts/`: repository checks and governance utilities.
 
@@ -22,8 +23,11 @@ Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
 
 ## Ingestion Modes
 
-- Historical one-time load: `ingestion/load_historical_gbif.py`
-- Daily incremental load: `ingestion/load_incremental_gbif.py`
+- Historical one-time load: module `ingestion.load_historical_gbif` (run manually, for example `docker compose run --rm ingest-historic`; not wired into Airflow)
+  - **Default:** GBIF [download API](https://techdocs.gbif.org/en/data-use/api-downloads) — one asynchronous job for the full `START_YEAR`–`END_YEAR` range, then stream the `SIMPLE_CSV` zip into DuckDB (no day-by-day search).
+  - Requires a GBIF.org account: set `GBIF_USER` (username), `GBIF_PASSWORD`, and `GBIF_NOTIFICATION_EMAIL` in `.env`.
+  - Optional: `GBIF_HISTORICAL_MODE=search` restores the old occurrence **search** ingest (day-by-day, capped by `GBIF_MAX_PER_DAY`).
+- Daily incremental load: module `ingestion.load_incremental_gbif`
   - starts from last stored `event_date` with a configurable lookback window
   - upserts by `gbif_id`, safe for reruns and overlaps
 
@@ -47,6 +51,10 @@ python scripts/validate_dbt_structure.py
 DUCKDB_PATH=data/flock.duckdb
 GBIF_COUNTRY=BE
 GBIF_CLASS_KEY=212
+# Historical download (default mode); create a free account at https://www.gbif.org/
+GBIF_USER=your_gbif_username
+GBIF_PASSWORD=your_gbif_password
+GBIF_NOTIFICATION_EMAIL=you@example.com
 GBIF_LIMIT=300
 GBIF_MAX_PER_DAY=10000
 GBIF_REQUEST_SLEEP_SECONDS=0.2
@@ -54,12 +62,26 @@ START_YEAR=2020
 END_YEAR=2026
 INCREMENTAL_DEFAULT_START_DATE=2025-01-01
 INCREMENTAL_LOOKBACK_DAYS=2
+LOG_LEVEL=INFO
 ```
 
 2) Copy dbt profile:
 
 ```bash
 copy dbt\profiles.yml.example dbt\profiles.yml
+```
+
+3) Run ingestion unit tests (from repo root):
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+4) Run a loader locally (from repo root; same as Docker `python -m …`):
+
+```bash
+python -m ingestion.load_incremental_gbif
+python -m ingestion.load_historical_gbif
 ```
 
 ## Docker Commands
@@ -102,7 +124,6 @@ Open Airflow UI at `http://localhost:8080` (`admin` / `admin`).
 
 DAGs:
 
-- `gbif_historic_bootstrap_once`: trigger manually once.
 - `gbif_incremental_daily`: scheduled daily; ingests new data then runs `dbt build`.
 
 ## Superset Visualization

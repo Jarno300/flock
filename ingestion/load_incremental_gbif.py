@@ -1,15 +1,21 @@
 from __future__ import annotations
 
+import logging
 import os
+import sys
 from datetime import date, timedelta
 
-try:
-    from ingestion.gbif_raw_loader import IngestConfig, get_max_event_date, run_ingest
-except ImportError:
-    from gbif_raw_loader import IngestConfig, get_max_event_date, run_ingest
+from .gbif_raw_loader import IngestConfig, get_max_event_date, run_ingest
+
+
+def _configure_logging() -> None:
+    level = getattr(logging, os.getenv("LOG_LEVEL", "INFO").upper(), logging.INFO)
+    logging.basicConfig(level=level, format="%(levelname)s %(name)s %(message)s")
 
 
 def main() -> None:
+    _configure_logging()
+    log = logging.getLogger(__name__)
     config = IngestConfig()
     default_start = os.getenv("INCREMENTAL_DEFAULT_START_DATE", "2025-01-01")
     lookback_days = int(os.getenv("INCREMENTAL_LOOKBACK_DAYS", "2"))
@@ -24,13 +30,23 @@ def main() -> None:
 
     end_date = date.today()
     if start_date > end_date:
-        print(f"No incremental load needed. start={start_date} end={end_date}")
+        log.info("No incremental load needed start=%s end=%s", start_date, end_date)
         return
 
-    print(f"Incremental ingest range: {start_date} -> {end_date}")
-    processed, written = run_ingest(start_date, end_date, config)
-    print(f"Incremental ingest finished. processed={processed} written={written}")
+    log.info("Incremental ingest range %s -> %s", start_date, end_date)
+    stats = run_ingest(start_date, end_date, config)
+    log.info(
+        "Incremental ingest finished processed=%s rows_upsert_attempted=%s",
+        stats.rows_processed,
+        stats.rows_upsert_attempted,
+    )
 
 
 if __name__ == "__main__":
+    if __package__ is None:  # pragma: no cover
+        sys.stderr.write(
+            "Run from repo root as: python -m ingestion.load_incremental_gbif "
+            "(with PYTHONPATH set to the project root, e.g. docker image default).\n"
+        )
+        raise SystemExit(2)
     main()
