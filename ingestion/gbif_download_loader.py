@@ -29,8 +29,10 @@ GBIF_DOWNLOAD_REQUEST_URL = os.getenv(
 GBIF_DOWNLOAD_STATUS_URL_TEMPLATE = os.getenv(
     "GBIF_DOWNLOAD_STATUS_URL_TEMPLATE", "https://api.gbif.org/v1/occurrence/download/{key}"
 )
+# Must include /v1/ — the host without /v1/ returns 404 for completed zips.
 GBIF_DOWNLOAD_ZIP_URL_TEMPLATE = os.getenv(
-    "GBIF_DOWNLOAD_ZIP_URL_TEMPLATE", "https://api.gbif.org/occurrence/download/request/{key}.zip"
+    "GBIF_DOWNLOAD_ZIP_URL_TEMPLATE",
+    "https://api.gbif.org/v1/occurrence/download/request/{key}.zip",
 )
 
 
@@ -145,12 +147,11 @@ def wait_for_download(
 
 
 def download_zip_to_tempfile(
-    session: requests.Session, key: str, user: str, password: str
+    session: requests.Session, zip_url: str, user: str, password: str
 ) -> str:
-    url = GBIF_DOWNLOAD_ZIP_URL_TEMPLATE.format(key=key)
-    response = session.get(url, auth=(user, password), stream=True, timeout=300)
+    response = session.get(zip_url, auth=(user, password), stream=True, timeout=300)
     if response.status_code == 401:
-        response = session.get(url, stream=True, timeout=300)
+        response = session.get(zip_url, stream=True, timeout=300)
     response.raise_for_status()
     tmp = tempfile.NamedTemporaryFile(suffix=".zip", delete=False)
     try:
@@ -218,8 +219,14 @@ def run_download_ingest(start_date: date, end_date: date, config: IngestConfig) 
 
     session = create_gbif_search_session()
     try:
-        wait_for_download(session, key, poll_seconds=poll, max_wait_seconds=max_wait)
-        zip_path = download_zip_to_tempfile(session, key, user, password)
+        meta = wait_for_download(session, key, poll_seconds=poll, max_wait_seconds=max_wait)
+        zip_url = (meta.get("downloadLink") or "").strip()
+        if not zip_url:
+            zip_url = GBIF_DOWNLOAD_ZIP_URL_TEMPLATE.format(key=key)
+            logger.warning("No downloadLink in GBIF status payload; using constructed URL")
+        else:
+            logger.info("Using downloadLink from GBIF status")
+        zip_path = download_zip_to_tempfile(session, zip_url, user, password)
     finally:
         session.close()
 
