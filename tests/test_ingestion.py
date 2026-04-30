@@ -6,14 +6,15 @@ import json
 import unittest
 from datetime import date
 
-from ingestion.gbif_download_loader import build_download_predicate
-from ingestion.gbif_raw_loader import (
+from src.ingestion.download_utils import build_download_predicate
+from src.ingestion.gbif_raw_loader import (
     IngestConfig,
     event_date_to_yyyy_mm_dd,
     issues_to_issues_json,
     normalize_download_csv_row,
     normalize_search_occurrence,
 )
+from src.ingestion.load_incremental_gbif import calculate_incremental_start
 
 
 def _test_ingest_config() -> IngestConfig:
@@ -111,6 +112,26 @@ class TestDownloadPredicate(unittest.TestCase):
         keys = {p["key"] for p in inner if p.get("type") == "equals"}
         self.assertIn("CLASS_KEY", keys)
         self.assertIn("COUNTRY", keys)
+
+
+class TestIncrementalStart(unittest.TestCase):
+    def test_uses_default_when_empty(self) -> None:
+        self.assertEqual(
+            calculate_incremental_start(date(2025, 1, 1), None, 2),
+            date(2025, 1, 1),
+        )
+
+    def test_applies_lookback(self) -> None:
+        self.assertEqual(
+            calculate_incremental_start(date(2025, 1, 1), date(2026, 4, 10), 2),
+            date(2026, 4, 8),
+        )
+
+    def test_never_before_default(self) -> None:
+        self.assertEqual(
+            calculate_incremental_start(date(2025, 1, 1), date(2025, 1, 2), 7),
+            date(2025, 1, 1),
+        )
 
 
 if __name__ == "__main__":

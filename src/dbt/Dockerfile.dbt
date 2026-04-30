@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+
+WORKDIR /usr/app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV DBT_PROFILES_DIR=/usr/app/src/dbt
+
+RUN pip install --no-cache-dir "dbt-duckdb>=1.8.1,<2.0.0"
+
+COPY src/dbt /usr/app/src/dbt
+
+CMD ["dbt", "--version"]

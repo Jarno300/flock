@@ -5,7 +5,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DBT_MODELS_DIR = ROOT / "dbt" / "models"
+DBT_MODELS_DIR = ROOT / "src" / "dbt" / "models"
 ALLOWED_LAYERS = {"raw", "staging", "marts"}
 
 
@@ -22,7 +22,7 @@ def validate_layer_directories() -> None:
     unknown_dirs = sorted(p.name for p in child_dirs if p.name not in ALLOWED_LAYERS)
     if unknown_dirs:
         fail(
-            "Unknown layer directories under dbt/models: "
+            "Unknown layer directories under src/dbt/models: "
             f"{', '.join(unknown_dirs)}. Allowed layers: raw, staging, marts."
         )
 
@@ -36,9 +36,9 @@ def validate_file_locations() -> None:
     yml_files = sorted(DBT_MODELS_DIR.rglob("*.yml"))
 
     if not sql_files:
-        fail("No SQL models found under dbt/models.")
+        fail("No SQL models found under src/dbt/models.")
     if not yml_files:
-        fail("No YAML model files found under dbt/models.")
+        fail("No YAML model files found under src/dbt/models.")
 
     for path in sql_files + yml_files:
         rel = path.relative_to(DBT_MODELS_DIR)
@@ -55,7 +55,7 @@ def validate_raw_layer() -> None:
 
     sources_file = raw_dir / "sources.yml"
     if not sources_file.exists():
-        fail("Expected dbt/models/raw/sources.yml is missing.")
+        fail("Expected src/dbt/models/raw/sources.yml is missing.")
 
 
 def validate_staging_layer() -> None:

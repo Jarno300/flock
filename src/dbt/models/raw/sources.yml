@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Wide raw GBIF observations persisted in DuckDB.
+    schema: raw
+    tables:
+      - name: gbif_observations_raw
+        description: Raw GBIF records with full JSON payload and selected parsed fields.
+        columns:
+          - name: gbif_id
+            description: Unique GBIF occurrence identifier (upsert key from ingestion).
+            tests:
+              - not_null
+          - name: event_date
+            description: >
+              Interpreted observation date when GBIF provides one; may be null for
+              incomplete or ambiguous source records. Downstream marts exclude null dates.
+          - name: latitude
+            description: Decimal latitude (WGS84) when present; often null for invalid or non-point records.
+          - name: longitude
+            description: Decimal longitude (WGS84) when present; often null for invalid or non-point records.
+          - name: taxon_key
+            description: GBIF backbone taxon key for the matched name, when available.
+          - name: dataset_key
+            description: GBIF dataset UUID for the contributing dataset.
+          - name: raw_payload
+            description: Full GBIF JSON or CSV row JSON for auditability and future extraction.

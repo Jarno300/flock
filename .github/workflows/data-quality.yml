@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches:
+      - main
       - master
 
 jobs:
@@ -52,9 +53,53 @@ jobs:
           EOF
 
       - name: dbt deps
-        working-directory: dbt
+        working-directory: src/dbt
         run: dbt deps
 
       - name: dbt parse
-        working-directory: dbt
+        working-directory: src/dbt
         run: dbt parse
+
+      - name: dbt compile
+        working-directory: src/dbt
+        run: dbt compile
+
+  python-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ingestion test dependencies
+        run: pip install -r src/ingestion/requirements.txt
+
+      - name: Run Python unit tests
+        run: python -m unittest discover -s tests -v
+
+  frontend-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: src/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: src/frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: src/frontend
+        run: npm run build

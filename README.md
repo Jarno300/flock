@@ -1,15 +1,17 @@
 # flock
 bird migration data pipeline
 
-Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
+Bird migration data pipeline using GBIF API, DuckDB, dbt, Airflow, FastAPI, React, and Superset.
 
 ## Architecture
 
-- `ingestion/`: Python package (`ingestion.*`) for GBIF extract/load into DuckDB; canonical raw DDL reference in `ingestion/sql/raw_gbif_observations.sql`.
+- `src/ingestion/`: Python package (`src.ingestion.*`) for GBIF extract/load into DuckDB; canonical raw DDL reference in `src/ingestion/sql/raw_gbif_observations.sql`.
 - `tests/`: unit tests for ingestion helpers (`python -m unittest discover -s tests`).
-- `dbt/`: layered transformation models (`raw -> staging -> marts`).
-- `airflow/`: orchestration for the daily incremental ingest and dbt build (historical backfill is manual; see Docker commands).
-- `visualization/`: Superset runtime and dashboard query assets.
+- `src/dbt/`: layered transformation models (`raw -> staging -> marts`).
+- `src/airflow/`: orchestration for the daily incremental ingest and dbt build (historical backfill is manual; see Docker commands).
+- `src/superset/`: Superset runtime and dashboard query assets.
+- `src/frontend/`: React operations console for pipeline control and monitoring.
+- `src/backend/`: FastAPI service that controls Airflow and queries DuckDB.
 - `scripts/`: repository checks and governance utilities.
 
 ## Data Storage (DuckDB)
@@ -23,19 +25,19 @@ Bird migration data pipeline using GBIF API, DuckDB, dbt, and Airflow.
 
 ## Ingestion Modes
 
-- Historical one-time load: module `ingestion.load_historical_gbif` (run manually, for example `docker compose run --rm ingest-historic`; not wired into Airflow)
-  - **Default:** GBIF [download API](https://techdocs.gbif.org/en/data-use/api-downloads) — one asynchronous job for the full `START_YEAR`–`END_YEAR` range, then stream the `SIMPLE_CSV` zip into DuckDB (no day-by-day search).
+- Historical one-time load: module `src.ingestion.load_historical_gbif` (run manually, for example `docker compose run --rm ingest-historic`; not wired into Airflow)
+  - **Default:** GBIF [download API](https://techdocs.gbif.org/en/data-use/api-downloads) — one job for the full `START_YEAR`–`END_YEAR` range, then stream the download zip into DuckDB. Set `GBIF_DOWNLOAD_FORMAT` to `SIMPLE_CSV` (default, one tab file in the zip) or `SIMPLE_PARQUET` (all `.parquet` shards in the zip, often thousands, read sequentially via PyArrow). Tunables: `GBIF_PARQUET_BATCH_ROWS` (default `65536`), `GBIF_PARQUET_FILE_LOG_INTERVAL` (log every N shards, default `100`).
   - Requires a GBIF.org account: set `GBIF_USER` (username), `GBIF_PASSWORD`, and `GBIF_NOTIFICATION_EMAIL` in `.env`.
-  - Optional: `GBIF_HISTORICAL_MODE=search` restores the old occurrence **search** ingest (day-by-day, capped by `GBIF_MAX_PER_DAY`).
-- Daily incremental load: module `ingestion.load_incremental_gbif`
+  - Scope is fixed to Belgium birds: `GBIF_COUNTRY=BE`, `GBIF_CLASS_KEY=212`, download mode only.
+- Daily incremental load: module `src.ingestion.load_incremental_gbif`
   - starts from last stored `event_date` with a configurable lookback window
   - upserts by `gbif_id`, safe for reruns and overlaps
 
 ## Layer Conventions (Enforced)
 
-- `dbt/models/raw`: source YAML only (`sources.yml`)
-- `dbt/models/staging`: SQL models must start with `stg_`
-- `dbt/models/marts`: SQL models must start with `dim_` or `fct_`
+- `src/dbt/models/raw`: source YAML only (`sources.yml`)
+- `src/dbt/models/staging`: SQL models must start with `stg_`
+- `src/dbt/models/marts`: SQL models must start with `dim_` or `fct_`
 
 Validation:
 
@@ -46,6 +48,12 @@ python scripts/validate_dbt_structure.py
 ## Local Setup
 
 1) Create `.env` in repo root:
+
+```bash
+copy .env.example .env
+```
+
+Then replace the GBIF credential placeholders.
 
 ```bash
 DUCKDB_PATH=data/flock.duckdb
@@ -68,7 +76,7 @@ LOG_LEVEL=INFO
 2) Copy dbt profile:
 
 ```bash
-copy dbt\profiles.yml.example dbt\profiles.yml
+copy src\dbt\profiles.yml.example src\dbt\profiles.yml
 ```
 
 3) Run ingestion unit tests (from repo root):
@@ -80,8 +88,8 @@ python -m unittest discover -s tests -v
 4) Run a loader locally (from repo root; same as Docker `python -m …`):
 
 ```bash
-python -m ingestion.load_incremental_gbif
-python -m ingestion.load_historical_gbif
+python -m src.ingestion.load_incremental_gbif
+python -m src.ingestion.load_historical_gbif
 ```
 
 ## Docker Commands
@@ -90,6 +98,13 @@ Build images:
 
 ```bash
 docker compose build
+```
+
+Start the full operational stack:
+
+```bash
+docker compose up airflow-init
+docker compose up airflow-webserver airflow-scheduler pipeline-backend pipeline-frontend
 ```
 
 Run one-time historical import:
@@ -111,6 +126,27 @@ docker compose run --rm dbt dbt deps
 docker compose run --rm dbt dbt build
 ```
 
+### After ingestion (dbt)
+
+When GBIF data is loaded into `data/flock.duckdb` (or your `DUCKDB_PATH`), refresh models and run tests:
+
+```bash
+docker compose run --rm dbt dbt deps
+docker compose run --rm dbt dbt build
+docker compose run --rm dbt dbt test
+```
+
+Locally, from the `src/dbt/` directory with `DUCKDB_PATH` set to the same file the loaders used:
+
+```bash
+cd src/dbt
+dbt deps --profiles-dir .
+dbt build --profiles-dir .
+dbt test --profiles-dir .
+```
+
+`dbt test` enforces staging rules (including valid-coordinate logic) and mart grain / referential checks (`fct_daily_species_observations` to `dim_species`).
+
 ## Airflow
 
 Start Airflow services:
@@ -125,6 +161,25 @@ Open Airflow UI at `http://localhost:8080` (`admin` / `admin`).
 DAGs:
 
 - `gbif_incremental_daily`: scheduled daily; ingests new data then runs `dbt build`.
+
+## Pipeline React Console
+
+Start the operations UI services:
+
+```bash
+docker compose up pipeline-backend pipeline-frontend
+```
+
+Open UI at `http://localhost:3000`.
+
+Backend API is exposed at `http://localhost:3001`.
+
+Capabilities:
+
+- launch historical bulk runs from the backend service with per-run year range (`start_year`, `end_year`) and max-per-day safety cap
+- activate/pause the daily incremental schedule
+- view backend historical job status and recent daily Airflow run states
+- inspect data availability metrics from DuckDB and top-species/trend panes
 
 ## Superset Visualization
 
@@ -150,7 +205,14 @@ Recommended datasets for portfolio dashboards:
 
 Starter SQL examples are in:
 
-- `visualization/superset_starter_queries.sql`
+- `src/superset/superset_starter_queries.sql`
+
+## Architecture Review Notes
+
+- DuckDB is used as a local analytical store to keep the project easy to run without cloud infrastructure. Treat `data/flock.duckdb` as a single-writer file: ingestion and dbt write to it; UI and Superset should only read from it.
+- Airflow owns the daily incremental workflow only. Historical bulk loads are started from the backend service because they are operator-driven, long-running bootstrap jobs rather than scheduled work.
+- dbt owns transformation and data quality contracts (`raw -> staging -> marts`), while the React console exposes operational controls and lightweight analytics.
+- Docker Compose credentials are local-demo defaults. For any deployed environment, replace them via `.env` or a secret manager.
 
 ## CI
 
@@ -158,3 +220,5 @@ Workflow: `.github/workflows/data-quality.yml`
 
 - validates dbt folder/naming conventions
 - runs `dbt deps` + `dbt parse` using DuckDB profile
+- runs Python ingestion unit tests
+- runs React frontend dependency install and production build

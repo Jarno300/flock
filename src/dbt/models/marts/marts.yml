@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: dim_species
+    description: >
+      Species dimension derived from valid staging observations with a known calendar date.
+      One row per stable GBIF taxon key when available, falling back to species_name.
+    columns:
+      - name: species_id
+        description: Stable species key for the mart; GBIF taxon_key as text when available, otherwise species_name.
+        tests:
+          - not_null
+          - unique
+      - name: taxon_key
+        description: GBIF taxon key when available.
+      - name: species_name
+        description: Display / filter label for the species.
+        tests:
+          - not_null
+      - name: scientific_name
+        description: Scientific name including authorship when provided by GBIF.
+      - name: first_observed_date
+        description: Earliest valid observation_date for this species in the staging slice.
+        tests:
+          - not_null
+      - name: last_observed_date
+        description: Latest valid observation_date for this species in the staging slice.
+        tests:
+          - not_null
+      - name: total_observation_records
+        description: Count of valid staging rows for this species (occurrence rows, not individuals).
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "total_observation_records > 0"
+
+  - name: fct_daily_species_observations
+    description: >
+      Daily grain fact: one row per (observation_date, species_id) for valid georeferenced
+      observations with a known date. Suitable for time series and maps in BI tools.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - observation_date
+            - species_id
+    columns:
+      - name: observation_date
+        description: Calendar date of observations (UTC date from staging).
+        tests:
+          - not_null
+      - name: species_id
+        description: Foreign key to dim_species.species_id.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_species')
+              field: species_id
+      - name: observation_records
+        description: Number of occurrence rows aggregated into this day and species.
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "observation_records > 0"
+      - name: individuals_observed
+        description: Sum of individual_count for that day and species.
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "individuals_observed >= 0"
+      - name: centroid_latitude
+        description: Mean latitude of included occurrences; useful as a display centroid, not a precise migration path.
+      - name: centroid_longitude
+        description: Mean longitude of included occurrences; useful as a display centroid, not a precise migration path.

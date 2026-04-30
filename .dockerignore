@@ -9,6 +9,9 @@ __pycache__/
 target/
 dbt_packages/
 logs/
-dbt/profiles.yml
+src/dbt/target/
+src/dbt/dbt_packages/
+src/dbt/logs/
+src/dbt/profiles.yml
 data/
-airflow/logs/
+src/airflow/logs/

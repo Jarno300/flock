@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_belgian_birds
+    description: >
+      Standardized staging for GBIF bird observations (Belgium / class filter applied at ingest).
+      Retains all rows; use is_valid_observation for coordinates and counts suitable for marts.
+    columns:
+      - name: gbif_id
+        description: GBIF identifier for one occurrence record.
+        tests:
+          - not_null
+          - unique
+      - name: species_name
+        description: Cleaned species value with Unknown fallback.
+        tests:
+          - not_null
+      - name: observation_date
+        description: >
+          Date from raw event_date; null when GBIF did not supply a parseable event date.
+          Marts exclude null dates.
+      - name: latitude
+        description: Observation latitude in degrees; null allowed for invalid or missing georeference.
+      - name: longitude
+        description: Observation longitude in degrees; null allowed for invalid or missing georeference.
+      - name: individual_count
+        description: Number of individuals observed (coalesced to 1 when null in raw).
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "individual_count >= 0"
+      - name: scientific_name
+        description: GBIF backbone scientific name (may include authorship).
+      - name: taxon_key
+        description: GBIF taxon key when available; preferred stable identifier for species marts.
+      - name: basis_of_record
+        description: GBIF basis of record (e.g. HUMAN_OBSERVATION, PRESERVED_SPECIMEN).
+      - name: occurrence_status
+        description: GBIF occurrence status (e.g. PRESENT, ABSENT) when provided.
+      - name: country_code
+        description: ISO country code from the record (ingest filter is typically BE).
+      - name: state_province
+        description: State or province from the record when provided.
+      - name: dataset_key
+        description: GBIF dataset UUID for provenance and joins to dataset metadata.
+      - name: ingestion_ts
+        description: Timestamp when the row was written by the ingestion pipeline.
+      - name: raw_payload
+        description: Serialized source payload for audit and future re-parsing.
+      - name: is_valid_observation
+        description: >
+          True only when both coordinates are non-null, within WGS84 bounds, and individual_count >= 0.
+        tests:
+          - accepted_values:
+              values: [true, false]
+          - dbt_utils.expression_is_true:
+              expression: "latitude is not null and longitude is not null and latitude between -90 and 90 and longitude between -180 and 180"
+              config:
+                where: "is_valid_observation"
+
+    tests:
+      - valid_lat_lon

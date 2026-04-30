@@ -1,16 +1,22 @@
 .env
+.env.*
 .aider*
 __pycache__/
 *.pyc
 target/
 dbt_packages/
 logs/
+src/dbt/target/
+src/dbt/dbt_packages/
+src/dbt/logs/
 .pytest_cache/
 data/
 *.duckdb
-airflow/logs/
-airflow/plugins/
-dbt/profiles.yml
+src/airflow/logs/
+src/airflow/plugins/
+src/dbt/profiles.yml
 
 gcp-key.json
-.env
+src/superset/superset/home/
+src/frontend/node_modules/
+src/frontend/dist/
